@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+   
+  body{
+      padding: 0; width: 100%; flex-grow: 0; flex-shrink: 0;
+      margin: 0;
+      font-family: 'Alata', sans-serif;
+  }
+    .head{
+        box-sizing: border-box;
+        width: 100%;
+        height: 3.5rem;
+        background: #112;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 7px;
+        padding-right: 7px;
+        
+    }
+    .logo{
+        height: 4rem;
+        width: 20px;
+        background: redd;
+        display: flex;
+        align-items: center;
+        justify-contentt: flex-start;
+    }
+    .nav
+        height: 80%;
+        width: match-height;
+        aspecttt-ratio: 1/1;
+        background: greenn;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: grow;
+    }
+    .logo{
+        height: 100%;
+    }
+    .navlinks{
+        height: 100%;
+        display: flex; background: redd;
+        align-items: flex-end;
+        gap: 2.0rem;
+        color: whitee;
+    }
+    .btn{
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+    }
+    .navbar{
+        z-index: 1;
+        position: absolute;
+        top: 3.5rem;
+        box-sizing: border-box;
+        height: 90vh;
+        width: 100%;
+        background: #112;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-contentt: center;
+        gap: .7rem;
+        padding-top: 0rem;
+        transition: .5s linear;
+        float: right;
+        overflow-x: hidden;
+    }
+    .navbar>span{
+        padding: 30px;
+        background: yelloww;
+        
+        text-align: center;
+     /*   border-bottom: 1px solid white;*/
+        color: blue;
+        flex-shrink: 0;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        align-self: flex-endd;
+        color: transparent;
+    }
+    hr{
+        width: 0%; height: 0px;
+        border; 1px solid white; outline: none;
+        background: white;
+        padding: 0;
+        margin: 0; transition-duration:2s;
+        /*animation: underline linear forwards;*/
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes underline{
+        from{
+            width:0;
+        }
+        to{
+            width: 80%;
+        }
+    }
+    @keyframes close{
+      /*  0%{
+
+            width: 80%;
+        }   */
+        to{ 
+          /*  transform: translateX(-25%);*/
+            width: 0;
+        }
+    }
+    @keyframes fadein{
+        from{
+            color: transparent;
+        }
+        to{
+            color: white;
+        }
+    }
+    @keyframes fadeout{
+        from{
+            color: white;
+        }
+        to{
+            color: transparent;
+        }
+    }
+    span{align-self: center;
+        font-size: 24px;
+        padding: 0; color: 
+        line-height: 12px;
+        flex-shrink: 0;
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+       .body-contents{ font-size: 24px;
+       width: 100%;
+       height: 70vh;
+   }
+   #footer{
+       box-sizing: border-box;
+       width: 100%;
+       height: match;
+       display: flex;
+       flex-direction: column;
+       background: #263238;
+       gap: 1.8rem;
+       
+       
+   }
+   
+       .footer{
+           box-sizing: border-box;
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+           width: 100%;
+           height: match;
+           padding: 5px;
+           display: flex; 
+           justify-content: space-evenly;
+           flex-wrap: wrap;
+           flex-direction: row;
+           background: none;
+           font-size: 32px;
+           gap: 60px;
+           row-gap: 0px;
+       }
+       .footer-divs{
+           margin-top: 5px;
+           color: white;
+           min-width: 55vmin;
+           min-height: 50px;
+           background: blackk;
+           flex-shrink: 0;
+           line-height: 150%;
+           text-align: center;
+           flex-grow: 0;
+           
+       }
+       ul{
+           
+           padding: 0;
+       }
+       .footer-divs>ul>li{
+           list-style-type: none;
+           margin-left: 0;
+           list-style-position: inside;
+           margin: 0;
+       }
+       h4{
+           padding: 0;
+           height: 0;
+           margin: 0;
+           font-size: 120%;
+           margin: 0 auto;
+           text-align: center;
+           background: redd;
+       }
+       .subscribe{
+           display: flex;
+           margin: 0 auto;
+           width: 75%;
+           height: 2.7rem;
+           padding-top: 15px;
+           padding-bottom: 15px;
+       }
+       .subscribe::before{
+           content: "Subscribe to our Newsletter:";
+           position: absolute;
+           transform: translateY(-100%);
+           padding-bottom: 7px;
+           width: auto;
+           background: bluee;
+           font-size: 24px;
+           color: white;
+           border-left: 2px solid #112;
+       }
+       #subscribe-inpt{
+           width: 70%;
+           height: 100%;
+           outline: none;
+           border: 2px solid #112;
+           padding-left: 12px;
+           backgroundd: rgb(225,225,225,.4);
+       }
+       #subscribe-btn{
+           width: 30%;
+           height: 100%;
+           color: white;
+           background: #112;
+           border: none;
+           outline: none;
+       }
+       .footer-logo{
+           min-width: 10%;
+           height: 3.7rem;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background: greenn;
+           
+       }
+       .copyright{
+           color: white;
+           background: black;
+           width: 100%;
+           text-align: center;
+           padding-top: 7px;
+           padding-bottom: 7px;
+       }
+    
+    
+    
+        #mainn{
+        position: relative;
+        font-size: 24px;
+        width: 100%;
+        height: 100%;
+        background: green;
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+    }
+    #overlay{
+        width: 75%;
+        height: 60%;
+        position: absolute;
+        background: rgb(60,0,180,0.6);
+        color: white;
+        transform: translateX(-10%);
+    }
+    #pic{
+        width: 100%;
+        height: 100%;
+        background: pink;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        overflow: hidden;
+        
+    }
+    #pic>img{
+        min-width: 100%;
+        min-height: 100%;
+        mask-image: linear-gradient(to right, transparent, black); 
+    }
+    
+    
+    
+  </style>
+  <title>Camera Video with Blurred Background</title>
+</head>
+<body>
+  
+  
+  <div class="head">
+      <div class="logo" style="height: 55%;">
+          <img src="matric.png" style="height: 100%;">
+      </div>
+      <div class="nav" style="height: 50%;">
+          <div class="navlinks" style="display: none;">
+              <span><b>HOME</b></span>
+              <span>ABOUT</span>
+              <span>ARTICLE</span>
+              <span>GALLERY</span>
+              <span>CONTACTS</span>
+          </div>
+          
+          <button class="btn" style="display: nonee;" onclick="showHd()">
+              
+               <svg id="hamburger" fill="white" width="auto" height="auto" viewBox="0 0 52 52" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><path d="M50,12.5H2a2,2,0,0,1,0-4H50a2,2,0,0,1,0,4Z"/><path d="M50,28H2a2,2,0,0,1,0-4H50a2,2,0,0,1,0,4Z"/><path d="M50,43.5H2a2,2,0,0,1,0-4H50a2,2,0,0,1,0,4Z"/></svg>
+               
+               <svg style="display: none;" id="cancel" fill="white" width="auto" height="auto" viewBox="0 0 52 52" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><path d="M28.94,26,51.39,3.55A2.08,2.08,0,0,0,48.45.61L26,23.06,3.55.61A2.08,2.08,0,0,0,.61,3.55L23.06,26,.61,48.45A2.08,2.08,0,0,0,2.08,52a2.05,2.05,0,0,0,1.47-.61L26,28.94,48.45,51.39a2.08,2.08,0,0,0,2.94-2.94Z"/></svg> 
+
+
+          </button>
+      </div>
+  </div>
+  <div class="navbar" id="navbar">
+              <span><b>HOME</b></span>
+              <hr style="animation-delay: .0s;">
+              <span style="animation-delay: .2s;">ABOUT</span>
+              <hr style="animation-delay: .2s;">
+              <span style="animation-delay: .4s;">ARTICLE</span>
+              <hr style="animation-delay: .4s;">
+              <span style="animation-delay: .6s;">GALLERY</span>
+              <hr style="animation-delay: .6s;">
+              <span style="animation-delay: .8s;">CONTACTS</span>
+              <hr style="animation-delay: .8s;">
+  </div>
+  
+  
+  
+  
+      <div class="body-contents">
+
+            <div id="mainn">
+        <div id="pic">
+            <img src="laptop2.jpg" alt="image here"></img>
+        </div>
+        <div id="overlay">
+            hello
+        </div>
+    </div>
+    </div>
+    
+    
+    <div id="footer">
+    <div class="footer">
+        <div class="footer-divs">
+            <h4>Our Products</h4>
+            <ul>
+                <li>Product One</li>
+                <li>Product Two</li>
+                <li>Produxt Three</li>
+            </ul>
+        </div>
+        
+        <div class="footer-divs">
+            <h4>Our Services</h4>
+            <ul>
+                <li>Service One</li>
+                <li>Service Two</li>
+                <li>Service Three</li>
+                <li>Service Four</li>
+            </ul>
+        </div>
+        
+        <div class="footer-divs">
+            <h4>Useful Links</h4>
+            <ul>
+                <li>First Link</li>
+                <li>Second Link</li>
+                <li>Third Link</li>
+                <li>Fourth Link</li>
+            </ul>
+        </div>
+        
+        <div class="footer-divs">
+            <h4>Contact Us</h4>
+            <ul>
+                <li>Telephone 1</li>
+                <li>Telephone 2</li>
+                <li>Telephone 3</li>
+                <li>Hotline</li>
+                <li>Email</li>
+                <li>Postal Addtess</li>
+                
+                
+            </ul>
+        </div>
+        
+
+    
+        <div class="footer-divs">
+            <h4>Additional Links</h4>
+            <ul>
+                <li>Additional 1</li>
+                <li>Additional 2</li>
+                <li>Additional 3</li>
+                <li>Additional 4</li>
+                </ul>
+        </div>
+    
+        <div class="footer-divs">
+            <h4>Extra Cont</h4>
+            <ul>
+                <li>Extra one</li>
+                <li>Extra two</li>
+                <li>Extra Last</li>
+            </ul>
+        </div>
+        
+        
+    </div> 
+    
+    <div class="subscribe">
+        <input type="email" placeholder="Enter your Email" id="subscribe-inpt">
+        <button id="subscribe-btn">Subscribe</button>
+    </div>
+    
+    <div class="footer-logo">
+        <img style="height: 100%;" src="matric.png">
+    </div>
+    
+    <div class="copyright">
+        <b>matric cybernetics &copy2023</b>
+    </div>
+    
+ </div>
+ 
+  
+  
+  
+  
+  
+  <script>
+  
+         //CODE FOR NAV BAR MOB8LE TOGGLE ONLY
+           let nav = document.getElementById("navbar");
+           let hamburger = document.getElementById("hamburger");
+           let cancel = document.getElementById("cancel");
+           let hr = document.getElementsByTagName("hr");
+         //  alert(hr.length);
+         
+           let dropnavs = nav.getElementsByTagName("span");
+         //  alert(dropnavs);
+           nav.style.height = "0vh";
+      function showHd(){
+          
+       //   let navh = nav.style.height; alert(navh);
+          
+          if(nav.style.height === "90vh"){
+              let delay = 1;
+              for(let i=0; i<hr.length; i++){
+              hr[i].style.width = "80%";
+              delay= delay -=.2;
+              hr[i].style.animationName = "close";
+              dropnavs[i].style.animationName = "fadein";
+              dropnavs[i].style.animationDelay = delay + "s";
+              hr[i].style.animationDelay = delay +"s";
+              }
+              nav.style.transitionDuration="1.2s";
+              hamburger.style.display = "inline-block";
+              cancel.style.display = "none";
+              nav.style.height = "4px";
+          }
+          else{
+              delay = -0.1;
+              for(let i=0; i<hr.length; i++){
+              hr[i].style.width = "4px";
+              hr[i].style.animationName = "underline";
+              delay= delay +=.1;
+              dropnavs[i].animationName = "fadeout"
+              hr[i].style.animationDelay = delay +"s";
+              dropnavs[i].style.animationDelay = delay+"s";
+              }
+              nav.style.transitionDuration = ".5s";
+              hamburger.style.display = "none";
+              cancel.style.display = "inline-block";
+          nav.style.height = "90vh";
+              
+          }
+          
+      }
+      
+     //END OF NAVBAR TOGGLE FUNCTIONALITY.... 
+      
+  </script>
+</body>
+</html>
